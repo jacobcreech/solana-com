@@ -31,7 +31,7 @@ There are three new instructions added in p-token:
 
 | Instruction                | Description                                                                                                       |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `withdraw_excess_lamports` | Allow recovering "bricked" SOL from mint (e.g., USDC mint as ~323 SOL in excess) and multisig accounts.           |
+| `withdraw_excess_lamports` | Allow recovering "bricked" SOL from mint (e.g., USDC mint has ~323 SOL in excess) and multisig accounts.           |
 | `batch`                    | Enable efficient CPI interaction with the Token program by batching multiple transfers into a single instruction. |
 | `unwrap_lamports`          | Allow transferring out lamports from native SOL token accounts directly to any destination account.               |
 
@@ -43,7 +43,7 @@ these new instructions, you have to update your indexing pipeline to parse the
 new instruction data.
 
 The new IDL for parsing the data is
-[available in the solan-program repository](https://github.com/solana-program/token/blob/main/program/idl.json).
+[available in the solana-program repository](https://github.com/solana-program/token/blob/main/program/idl.json).
 If you're using an indexer like
 [Carbon](https://github.com/sevenlabs-hq/carbon), you will be able to update
 your indexer with the new IDL. If you use the Solana SDKs for indexing, you will
